@@ -59,7 +59,7 @@
         .error {
             color: red;
             font-size: 14px;
-            margin-top: -10px;
+            margin-top: 10px;
             margin-bottom: 10px;
         }
     </style>
@@ -93,8 +93,11 @@
             <button type="button" onclick="calculate()">Calculate</button>
             <div class="result" id="results" style="display: none;"></div>
         </form>
-        <div class="note">
-            <p>The formula for predicted body weight used in the calculator is the same as that used in the UpToDate calculator for ideal body weight.</p>
+        <div class="note">// Round results
+        predictedBodyWeight = Math.round(predictedBodyWeight);
+        tidalVolume = Math.round(tidalVolume);
+            <p>Brower, R. G., Matthay, M. A., Morris, A., Schoenfeld, D., Thompson, B. T., & Wheeler, A. (2000). Ventilation with Lower Tidal Volumes as Compared with Traditional Tidal Volumes for Acute Lung Injury and the Acute Respiratory Distress Syndrome. New England Journal of Medicine, 342(18), 1301–1308. https://doi.org/10.1056/NEJM200005043421801
+</p>
         </div>
     </div>
 
@@ -137,7 +140,11 @@
 
             // Calculate tidal volume
             let tidalVolume = predictedBodyWeight * tidalVolumePerKg;
-
+            
+            // Round results
+            predictedBodyWeight = Math.round(predictedBodyWeight);
+            tidalVolume = Math.round(tidalVolume);
+            
             // Display results
             const resultsDiv = document.getElementById("results");
             resultsDiv.innerHTML = `
