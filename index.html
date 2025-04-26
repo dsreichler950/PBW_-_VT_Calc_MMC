@@ -96,7 +96,7 @@
         <div class="note">// Round results
         predictedBodyWeight = Math.round(predictedBodyWeight);
         tidalVolume = Math.round(tidalVolume);
-            <p>Brower, R. G., Matthay, M. A., Morris, A., Schoenfeld, D., Thompson, B. T., & Wheeler, A. (2000). Ventilation with Lower Tidal Volumes as Compared with Traditional Tidal Volumes for Acute Lung Injury and the Acute Respiratory Distress Syndrome. New England Journal of Medicine, 342(18), 1301–1308. https://doi.org/10.1056/NEJM200005043421801
+            <p> Reference - Brower, R. G., Matthay, M. A., Morris, A., Schoenfeld, D., Thompson, B. T., & Wheeler, A. (2000). Ventilation with Lower Tidal Volumes as Compared with Traditional Tidal Volumes for Acute Lung Injury and the Acute Respiratory Distress Syndrome. New England Journal of Medicine, 342(18), 1301–1308. https://doi.org/10.1056/NEJM200005043421801
 </p>
         </div>
     </div>
@@ -140,16 +140,12 @@
 
             // Calculate tidal volume
             let tidalVolume = predictedBodyWeight * tidalVolumePerKg;
-
-            // Round results
-            predictedBodyWeight = Math.round(predictedBodyWeight);
-            tidalVolume = Math.round(tidalVolume);
             
             // Display results
             const resultsDiv = document.getElementById("results");
             resultsDiv.innerHTML = `
-                <p><strong>Predicted Body Weight:</strong> ${predictedBodyWeight.toFixed(2)} kg</p>
-                <p><strong>Tidal Volume:</strong> ${tidalVolume.toFixed(2)} mL</p>
+                <p><strong>Predicted Body Weight:</strong> ${predictedBodyWeight.Math.round()} kg</p>
+                <p><strong>Tidal Volume:</strong> ${tidalVolume.Math.round()} mL</p>
             `;
             resultsDiv.style.display = "block";
         }
